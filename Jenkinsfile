@@ -18,6 +18,9 @@ pipeline{
 
                 echo "Check style result"
                 checkstyle canComputeNew: false, defaultEncoding: '', healthy: '', pattern: '', unHealthy: ''
+
+                echo "Test Build Report"
+                junit '**/test-reports/*.xml'
             }
         }
         stage('Deploy'){
