@@ -20,7 +20,7 @@ pipeline{
                 checkstyle canComputeNew: false, defaultEncoding: '', healthy: '', pattern: '', unHealthy: ''
 
                 echo "Test Build Report"
-                junit '**/test-reports/*.xml'
+                junit '**/TEST-*.xml'
             }
         }
         stage('Deploy'){
