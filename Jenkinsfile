@@ -21,6 +21,9 @@ pipeline{
 
                 echo "Test Build Report"
                 junit '**/TEST-*.xml'
+
+                echo "Archive WebApp"
+                archive '**/webapp.war'
             }
         }
         stage('Deploy'){
