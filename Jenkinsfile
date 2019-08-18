@@ -14,6 +14,7 @@ pipeline{
         stage('Build'){
             steps{
                 echo "This is Build stage"
+                sh label: '', script: 'clean package checkstyle : checkstyle'
             }
         }
         stage('Deploy'){
