@@ -15,6 +15,9 @@ pipeline{
             steps{
                 echo "This is Build stage"
                 sh label: '', script: 'mvn clean package checkstyle:checkstyle'
+
+                echo "Check style result"
+                checkstyle canComputeNew: false, defaultEncoding: '', healthy: '', pattern: '', unHealthy: ''
             }
         }
         stage('Deploy'){
