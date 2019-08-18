@@ -28,8 +28,11 @@ pipeline{
         }
         stage('Deploy'){
             steps{
-                
-                input 'Do you want to continue deploy on dev server?'
+                timeout(activity: true, time: 90, unit: 'SECONDS') {
+    // some block
+     input 'Do you want to continue deploy on dev server?'
+}
+               
                 echo "This is Deploy stage"
 
             }
