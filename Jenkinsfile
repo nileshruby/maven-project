@@ -28,7 +28,10 @@ pipeline{
         }
         stage('Deploy'){
             steps{
+                
+                input 'Do you want to continue deploy on dev server?'
                 echo "This is Deploy stage"
+
             }
         }
     }
